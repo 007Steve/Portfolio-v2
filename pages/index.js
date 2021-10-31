@@ -6,6 +6,7 @@ import ScrollDown from "./components/ScrollDown";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import SkillsCard from "./components/SkillsCard";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -44,7 +45,45 @@ export default function Home() {
         </div>
         {/* <img className={styles.aboutSection__photo}src="/headshot.png" alt=""/> */}
       </section>
-      <section className={styles.skillsSection}></section>
+      <section className={styles.skillsSection}>
+        <h1>What I can do</h1>
+        <div className={styles.skillsSection__container}>
+          <SkillsCard
+            title="Front-End"
+            img="/reactlogo.png"
+            p={[
+              "Develop user-frienly website that are responsive with frameworks",
+              <strong> React </strong>,
+              "and ",
+              <strong> NextJS </strong>,
+            ]}
+          />
+           <SkillsCard
+                title="Back-End"
+                img="/pngkey.com-database-icon-png-2317080.png"
+                color="orange"
+                p={[
+                  "Build and maintain the application ",
+                  <strong> Servers </strong>,
+                  "and ",
+                  <strong> Database</strong>,
+                  "with",
+                  <strong> Node JS</strong>,
+                ]}
+              />
+              <SkillsCard
+                title="Spatial Web"
+                img="/Daco_158498.png"
+                color="purple"
+                p={[
+                  "Develop user-frienly website that are responsive with technologies",
+                  <strong> AR </strong>,
+                  "and ",
+                  <strong> VR </strong>,
+                ]}
+              />
+        </div>
+      </section>
       <section className={styles.projectsSection}></section>
     </div>
   );
