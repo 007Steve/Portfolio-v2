@@ -1,0 +1,38 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 2rem;
+  transition: ease 342ms;
+}
+.nav__logo {
+  height: 12px;
+}
+.nav__menu {
+  border-radius: 50px;
+
+  cursor: pointer;
+  height: 80px;
+}
+.nav__menu:hover {
+  background-color: #1f1f71;
+  background-image: linear-gradient(0deg, #1f1f71 0%, #333aac 100%);
+
+  color: white;
+  transition: ease-in-out 243ms;
+}
+.navB {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  height: 14px;
+  z-index: 1000;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 3px 3px 5px 6px rgba(204, 204, 204, 0.13);
+  transition: ease 342ms;
+}
