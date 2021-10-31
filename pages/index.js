@@ -1,7 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import Nav from "./components/Nav";
+import ScrollDown from "./components/ScrollDown";
+import TwitterIcon from "@material-ui/icons/Twitter";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -11,7 +15,37 @@ export default function Home() {
         <link rel="icon" href="/spicon.png" />
       </Head>
 
-      <h1>AUSTIN</h1>
+      <section className={styles.headerSection}>
+        <ScrollDown />
+      </section>
+      <section className={styles.aboutSection}>
+        <div className={styles.aboutSection__container}>
+          <div className={styles.aboutSection__textsContainer}>
+            <h1 className={styles.aboutSection__nameSpan}>I'm</h1>
+            <h1 className={styles.aboutSection__name}> Stephen Plummer</h1>
+          </div>
+
+          <p className={styles.aboutSection__p}>
+            <strong>React</strong> repellat, maxime officiis ex quis nisi, quasi
+            veniam eaque reiciendis, <strong>WebGL</strong> est quos quas facere
+            suscipit natus sed.
+          </p>
+          <p className={styles.aboutSection__p}>
+            <strong>React</strong> repellat, maxime officiis ex quis nisi, quasi
+            veniam eaque reiciendis, <strong>WebGL</strong> est quos quas facere
+            suscipit natus sed.
+          </p>
+          <div>
+            <TwitterIcon className={styles.aboutSection__icon} />
+            <LinkedInIcon className={styles.aboutSection__icon} />
+            <GitHubIcon className={styles.aboutSection__icon} />
+          </div>
+          <p className={styles.aboutSection__line}></p>
+        </div>
+        {/* <img className={styles.aboutSection__photo}src="/headshot.png" alt=""/> */}
+      </section>
+      <section className={styles.skillsSection}></section>
+      <section className={styles.projectsSection}></section>
     </div>
-  )
+  );
 }
